@@ -15,9 +15,9 @@ If you find this project useful in your research, please consider citing:
 }
 ```
 
-![image-20230505154223044](C:\Users\陈超\AppData\Roaming\Typora\typora-user-images\image-20230505154223044.png)
+![image-20230505154223044](figures\image-20230505154223044.png)
 
-![image-20230505154401864](C:\Users\陈超\AppData\Roaming\Typora\typora-user-images\image-20230505154401864.png)
+![image-20230505154401864](figures\image-20230505154401864.png)
 
 ## Setup
 
