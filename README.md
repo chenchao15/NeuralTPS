@@ -15,9 +15,9 @@ If you find this project useful in your research, please consider citing:
 }
 ```
 
-![image-20230505154223044](figures\image-20230505154223044.png)
+![image-20230505154223044](figures/image-20230505154223044.png)
 
-![image-20230505154401864](figures\image-20230505154401864.png)
+![image-20230505154401864](figures/image-20230505154401864.png)
 
 ## Setup
 
@@ -54,6 +54,12 @@ cd nn_distance
 ## Dataset
 
 You can download our preprocessed ShapeNet dataset. Put all folders in `data`.
+
+You can also preprocess your own dataset by `sample.sh`, run: 
+
+```
+./sample.sh
+```
 
 ## Training and Evaluation
 
