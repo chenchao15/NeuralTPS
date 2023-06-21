@@ -369,7 +369,7 @@ with tf.Session(config=config) as sess:
                 loss_i = loss_i + loss_c
             loss_i = loss_i / SHAPE_NUM
             if(i%10 == 0):
-                print('epoch:', i, 'epoch loss:', loss_i, 'lpull loss: ', l2loss, 'sdf loss: ', sdfloss, 'cd loss: ', atlasloss)
+                print('epoch:', i, 'epoch loss:', loss_i)
             if(i%5000 == 0):
                 print('save model')
                 saver.save(sess, os.path.join(OUTPUT_DIR, "model"), global_step=i+1)
