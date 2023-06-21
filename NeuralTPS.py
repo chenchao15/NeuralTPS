@@ -321,9 +321,9 @@ sp_train, sp_test = SurfaceParameterization(2000, POINT_NUM)
 sp_test = tf.stop_gradient(sp_test)
 sp_test = tf.concat([sp_test, spase_gt_input], 1)
 
-cd_loss = get_chamfer_distance(spase_gt_input, sp_train)
+cd_loss = gt_chamfer_distance(spase_gt_input, sp_train)
 
-points_target, lpull_weight = get_gt_and_weight(input_points_3d, atlas_out_test, spase_gt_input)
+points_target, lpull_weight = get_gt_and_weight(input_points_3d, sp_test, spase_gt_input)
 lpull_loss = lpull_weight * tf.norm((points_target - surface_points), axis=-1)
 lpull_loss = tf.reduce_mean(lpull_loss)
 
@@ -476,7 +476,7 @@ with tf.Session(config=config) as sess:
                     normal = data['normals']
                 else:
                     mesh_gt = trimesh.load(GT_DIR + files[epoch] + '.ply')
-                    pointcloud = pointcloud.astype(np.float32)
+                    pointcloud, idx_gt = mesh_gt.sample(100000, return_index=True)
                     normal = mesh_gt.face_normals[idx_gt]
                 
                 nc_t,cd_t,cd2_t = eval_pointcloud(ps,pointcloud.astype(np.float32),normals_pred.astype(np.float32),normal.astype(np.float32))
