@@ -272,7 +272,7 @@ def NeuralTPS(points_input, control_input):
     query_distance_net = get_tps_distance(query_net, control_net)
     control_distance_net = get_tps_distance(control_net, control_net)
     distance_net = tf.concat([query_distance_net, control_distance_net], 1)
-    distance_net = tf.reshape(dis, [BS, -1, GT_NUM])
+    distance_net = tf.reshape(distance_net, [BS, -1, GT_NUM])
     b_initializer=tf.constant_initializer(-0.5)
     w_initializer = tf.random_normal_initializer(mean=2*np.sqrt(np.pi) / np.sqrt(512), stddev = 0.000001)
     sdf_fea = tf.layers.dense(tf.nn.relu(middle_net), 1, kernel_initializer=w_initializer, bias_initializer=b_initializer)

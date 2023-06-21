@@ -31,6 +31,6 @@ def patch_net(input, index, is_training, act_func):
     return pattern
     
 
-def get_2d_01_noise(pointnum, n):
+def get_2d_samples(pointnum, n):
     samples = tf.random_uniform([n, pointnum, 2], 0.0, 1.0)
     return samples
