@@ -1,6 +1,6 @@
-# Unsupervised Inference of Signed Distance Functions from Single Sparse Point Clouds without Learning Priors
+# Unsupervised Inference of Signed Distance Functions from Single Sparse Point Clouds without Learning Priors (TPAMI 2024 / CVPR 2023)
 
-This is the code of  [Unsupervised Inference of Signed Distance Functions from Single Sparse Point Clouds without Learning Priors](https://arxiv.org/pdf/2303.14505.pdf), a paper at CVPR 2023.
+### [Project](https://chenchao15.github.io/NeuralTPS_page/) | [paper (TPAMI)](https://yushen-liu.github.io/main/pdf/LiuYS_TPAMI24_NeuralTPS.pdf) | [paper (CVPR)](https://arxiv.org/pdf/2303.14505.pdf) 
 
 ## Citation
 
